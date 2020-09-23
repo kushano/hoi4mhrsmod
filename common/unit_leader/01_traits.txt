@@ -1,0 +1,16 @@
+leader_traits = {
+
+	mhrs_hero = { 
+		type = land
+		trait_type = personality_trait
+		
+		modifier = {
+			max_dig_in = 1
+		}
+		
+		non_shared_modifier = {
+			experience_gain_factor = -0.25
+		}
+	}
+
+}

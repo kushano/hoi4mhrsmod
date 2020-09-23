@@ -1,0 +1,112 @@
+﻿capital = 12
+
+#oob = "SAV_1936"
+
+set_research_slots = 3
+set_stability = 0.5
+set_war_support = 0.5
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	paratroopers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	gwtank = 1
+	basic_light_tank = 1  # PLACEHOLDER
+	#basic_heavy_tank = 1  # PLACEHOLDER
+	#basic_medium_tank = 1 # PLACEHOLDER
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	naval_bomber1 = 1
+	mass_assault = 1
+	fleet_in_being = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+
+set_convoys = 200
+
+set_politics = {
+	ruling_party = revisionism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	revisionism = 100
+}
+
+create_country_leader = {
+	name = "Egor Chukharev"
+	desc = ""
+	picture = "gfx/leaders/KSK/ksk_chu.dds"
+	expire = "1965.1.1"
+	ideology = revisionism_type 
+	traits = {
+		#
+	}
+}
+
+###
+
+create_corps_commander = {
+	name = "Sergey Kurenkok"
+	picture = "portrait_kurenk_tri.dds"
+	traits = { war_hero }
+	skill = 2
+
+	
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Sergiy Kurenkovich"
+	picture = "portrait_kurenk_dva.dds"
+	traits = { war_hero }
+	skill = 1
+
+	
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Sergok Kurenk"
+	picture = "portrait_kurenk_chetire.dds"
+	traits = { war_hero }
+	skill = 1
+
+	
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_field_marshal = {
+	name = "Sergo Kurenkov"
+	picture = "sav_kurenkov_army.dds"
+	traits = { old_guard media_personality politically_connected }
+	skill = 1
+
+	
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}

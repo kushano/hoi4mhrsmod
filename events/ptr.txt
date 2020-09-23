@@ -1,0 +1,145 @@
+﻿###########################
+# PTR Events
+###########################
+
+add_namespace = ptr
+
+country_event = { #on startup
+	id = ptr.1
+	title = ptr.1.t
+	desc = ptr.1.d
+	picture = GFX_report_event_soviet_purge_officers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ptr.1.a
+		unlock_national_focus = PTR_nkvd_power
+		load_oob = "PTR_1936"
+		create_field_marshal = {
+			name = "Ivan Chernyakov"
+			picture = "ptr_chernyak.dds"
+			traits = { offensive_doctrine }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		create_corps_commander = {
+			name = "Vladislav Fedosov"
+			picture = "ptr_fedosov.dds"
+			traits = { trickster }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+		}
+		create_corps_commander = {
+			name = "Tanya Mahno"
+			picture = "ptr_mahno.dds"
+			traits = {  }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}
+country_event = { #on startup
+	id = ptr.2
+	title = ptr.2.t
+	desc = ptr.2.d
+	picture = GFX_report_event_soviet_purge_officers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ptr.2.a
+		unlock_national_focus = PTR_kurenkov_power
+		load_oob = "PTR_1936"
+		create_field_marshal = {
+				name = "Ivan Chernyakov"
+				picture = "ptr_chernyak.dds"
+				traits = { offensive_doctrine }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 3
+				logistics_skill = 2
+			}
+			create_corps_commander = {
+				name = "Vladislav Fedosov"
+				picture = "ptr_fedosov.dds"
+				traits = { trickster }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 3
+			}
+			create_corps_commander = {
+				name = "Tanya Mahno"
+				picture = "ptr_mahno.dds"
+				traits = {  }
+				skill = 1
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Sergey Kurenkok"
+				picture = "portrait_kurenk_tri.dds"
+				traits = { war_hero }
+				skill = 2
+			
+				
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 2
+			}
+			
+			create_corps_commander = {
+				name = "Sergiy Kurenkovich"
+				picture = "portrait_kurenk_dva.dds"
+				traits = { war_hero }
+				skill = 1
+			
+				
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			
+			create_corps_commander = {
+				name = "Sergok Kurenk"
+				picture = "portrait_kurenk_chetire.dds"
+				traits = { war_hero }
+				skill = 1
+			
+				
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			
+			create_field_marshal = {
+				name = "Sergo Kurenkov"
+				picture = "sav_kurenkov_army.dds"
+				traits = { old_guard media_personality politically_connected }
+				skill = 1
+			
+				
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+	}
+}

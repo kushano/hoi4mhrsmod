@@ -1,0 +1,31 @@
+state=
+{
+	id=647
+	name="STATE_647"
+	state_category = small_island
+	manpower = 12100
+	history=
+	{
+		owner = KRJ
+		add_core_of = KRJ
+		#add_extra_state_shared_building_slots = 25
+		buildings = {
+			arms_factory = 1
+			industrial_complex = 1
+			infrastructure = 3
+			air_base = 1
+			4357 = {
+				naval_base = 1
+
+			}
+		}
+		
+		victory_points = {
+			4357 10
+		}
+	}
+	provinces={
+		4357 12103
+	}
+	buildings_max_level_factor=1.000
+}

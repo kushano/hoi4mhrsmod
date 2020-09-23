@@ -1,0 +1,25 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			SAV = {
+				country_event = {
+					id = savia.mod1
+				}
+			}
+		}
+		effect = {
+			NPC = {
+				country_event = {
+					id = npc.1
+				}
+			}
+		}
+		effect = {
+			KRJ = {
+				country_event = {
+					id = krujok.1
+				}
+			}
+		}
+	}
+}

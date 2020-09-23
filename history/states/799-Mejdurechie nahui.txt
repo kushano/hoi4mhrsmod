@@ -1,0 +1,24 @@
+state={
+	id=799
+	name="STATE_799"
+	provinces={
+		8007 9084 10066 10887 12005 12822 
+	}
+	manpower = 4637140
+	
+	state_category = rural
+	
+	resources={
+		oil=3 # was: 3
+	}
+	history={
+		owner = RVB
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1  
+		}
+		add_core_of = RVB
+	}
+	buildings_max_level_factor=1.000
+}

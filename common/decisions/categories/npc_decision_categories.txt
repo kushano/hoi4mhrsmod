@@ -1,0 +1,27 @@
+npc_blinostroika_decision = {
+	icon = generic_propaganda
+
+	picture = GFX_decision_cat_picture_concessions_to_the_trade_unions
+
+	visible = {
+		original_tag = NPC
+	}
+	available = {
+		has_completed_focus = NPC_blinostroika
+	}
+}
+npc_north_republic_wars_decision = {
+	icon = generic_propaganda
+
+	#picture = GFX_decision_cat_picture_concessions_to_the_trade_unions
+
+	visible = {
+		original_tag = NPC
+	}
+	available = {
+		#AND = {
+		#	has_completed_focus = NPC_light_order
+		#	#has_completed_focus = NPC_towards_the_north_republic
+		#}
+	}
+}

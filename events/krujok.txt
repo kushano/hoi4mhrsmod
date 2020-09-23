@@ -1,0 +1,97 @@
+add_namespace = krujok
+
+country_event = { #on startup
+	id = krujok.1
+	title = krujok.1.t
+	desc = krujok.1.d
+	picture = GFX_report_event_soviet_purge_officers_01
+
+	is_triggered_only = yes
+	
+	timeout_days = 1
+	
+	option = {
+		name = krujok.1.a
+		647 = {
+			add_extra_state_shared_building_slots = 5
+		}
+	}
+}
+country_event = { #основной вопрос философии
+	id = krujok.2
+	title = krujok.2.t
+	desc = krujok.2.d
+	picture = GFX_report_event_soviet_purge_officers_01
+
+	is_triggered_only = yes
+	
+	timeout_days = 14
+	
+	option = {
+		name = krujok.2.a
+		unlock_national_focus = KRJ_materialism
+	}
+	option = {
+		name = krujok.2.b
+		unlock_national_focus = KRJ_idealism
+	}
+}
+country_event = { #посмотрел евангелион
+	id = krujok.3
+	title = krujok.3.t
+	desc = krujok.3.d
+	picture = GFX_report_event_soviet_purge_officers_01
+
+	is_triggered_only = yes
+	
+	timeout_days = 14
+	option = {
+		name = krujok.3.a
+		create_corps_commander = {
+			name = "Asuka Langley Soryu"
+			picture = "portrait_asuka.dds"
+			traits = { trickster }
+			skill = 1
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 0
+			logistics_skill = 1
+		}
+	}
+	option = {
+		name = krujok.3.b
+		create_corps_commander = {
+			name = "Ayanami Rei"
+			picture = "portrait_rey.dds"
+			traits = { brilliant_strategist }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+}
+country_event = { #закон о пиратстве
+	id = krujok.4
+	title = krujok.4.t
+	desc = krujok.4.d
+	picture = GFX_report_event_soviet_purge_officers_01
+
+	is_triggered_only = yes
+	
+	timeout_days = 14
+	option = {
+		name = krujok.4.a
+		create_navy_leader = {
+			name = "Maxim Kazantsev"
+			picture = "portrait_kazantsev.dds"
+			traits = { aviation_enthusiast superior_tactician }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+		}
+	}
+}

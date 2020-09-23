@@ -1,0 +1,23 @@
+state={
+	id=797
+	name="STATE_797"
+	provinces={
+		1948 2017 2062 
+	}
+	manpower = 1632860
+	
+	state_category = rural
+
+	history={
+		owner = RN1
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			4893 1 
+		}
+		add_core_of = RVB
+		add_core_of = RN1
+	}
+	buildings_max_level_factor=1.000
+}

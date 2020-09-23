@@ -1,0 +1,34 @@
+##### Division Templates #####
+division_template = {
+	name = "Otryad Koshkodevochek"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+	}
+	support = {
+	}
+}
+units = {		
+	division = {		
+		location = 4357 
+		division_template = "Otryad Koshkodevochek"
+		start_experience_factor = 0.05
+		start_equipment_factor = 1
+	}
+}	
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+		
+	add_equipment_production = {
+		equipment = {
+			type = infantry_weapons
+			creator = "KRJ"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 50
+	}
+}

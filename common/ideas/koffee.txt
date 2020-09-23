@@ -1,0 +1,33 @@
+ideas = {
+	country = {
+		kub_communists_in_the_country = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = anti_soviet_pact
+			
+			modifier = {
+				communism_drift = 0.05
+			}
+		}
+		kub_no_memes_at_all = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = no_memes
+			
+			modifier = {
+				consumer_goods_factor = 1
+				production_speed_industrial_complex_factor = -100
+			}
+		}
+	}
+}

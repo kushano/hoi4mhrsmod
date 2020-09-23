@@ -1,0 +1,261 @@
+focus_tree = {
+	id = petrosovet_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = PTR
+		}
+	}
+	
+	continuous_focus_position = {
+		x = 0
+		y = 2000
+	}
+	
+	default = no
+
+	focus = {
+		id = PTR_kurenkov_power
+		icon = GFX_goal_generic_dangerous_deal
+		x = 10
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = { focus = PTR_nkvd_power }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = PTR_duche_kurenkuche
+		icon = GFX_goal_generic_dangerous_deal
+		x = -4
+		y = 2
+		relative_position_id = PTR_kurenkov_power
+		cost = 2
+		prerequisite = { focus = PTR_kurenkov_power }
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = { focus = PTR_democratic_coup }
+		mutually_exclusive = { focus = PTR_the_king_kurenkov }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_war_support = 0.05
+			set_party_name = { 
+				ideology = fascism 
+				long_name = PTR_duche_kurenkuche_party_long 
+				name = PTR_duche_kurenkuche_party 
+			}
+			set_politics = {
+				ruling_party = fascism
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.15
+			}
+			create_country_leader = {
+				name = "Duche Kurenkuche"
+				desc = ""
+				picture = "portrait_duche.dds"
+				expire = "1965.1.1"
+				ideology = nazism
+				traits = {
+					
+				}
+			}
+		}
+	}
+	focus = {
+		id = PTR_the_king_kurenkov
+		icon = GFX_goal_generic_dangerous_deal
+		x = 0
+		y = 2
+		relative_position_id = PTR_kurenkov_power
+		cost = 2
+		prerequisite = { focus = PTR_kurenkov_power }
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = { focus = PTR_democratic_coup }
+		mutually_exclusive = { focus = PTR_duche_kurenkuche }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_war_support = 0.05
+			set_politics = {
+				ruling_party = neutrality
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.15
+			}
+			create_country_leader = {
+				name = "King Sergiy II"
+				desc = ""
+				picture = "portrait_kurenkov_the_king.dds"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					
+				}
+			}
+		}
+	}
+	focus = {
+		id = PTR_democratic_coup
+		icon = GFX_goal_generic_dangerous_deal
+		x = 4
+		y = 2
+		relative_position_id = PTR_kurenkov_power
+		cost = 2
+		prerequisite = { focus = PTR_kurenkov_power }
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = { focus = PTR_duche_kurenkuche }
+		mutually_exclusive = { focus = PTR_the_king_kurenkov }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_war_support = 0.05
+			set_politics = {
+				ruling_party = democratic
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
+			create_country_leader = {
+				name = "Sergey Borisovich Eltsyn"
+				desc = ""
+				picture = "portrait_kurenk_chetire.dds"
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = {
+					
+				}
+			}
+		}
+	}
+	focus = {
+		id = PTR_revisionist_charge
+		icon = GFX_goal_generic_dangerous_deal
+		x = 9
+		y = 1
+		relative_position_id = PTR_kurenkov_power
+		cost = 2
+		prerequisite = { focus = PTR_kurenkov_power focus = PTR_nkvd_power }
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = { focus = PTR_duche_kurenkuche }
+		mutually_exclusive = { focus = PTR_the_king_kurenkov }
+		mutually_exclusive = { focus = PTR_democratic_coup }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = PTR_nkvd_power
+		icon = GFX_goal_demand_sudetenland
+		x = 18
+		y = 0
+		relative_position_id = PTR_kurenkov_power
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = { focus = PTR_kurenkov_power }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = PTR_nkvd_charge
+		icon = GFX_goal_generic_dangerous_deal
+		x = 0
+		y = 2
+		relative_position_id = PTR_nkvd_power
+		cost = 2
+		prerequisite = { focus = PTR_nkvd_power }
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = { focus = PTR_anarchy_charge }
+		mutually_exclusive = { focus = PTR_the_true_path }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = PTR_anarchy_charge
+		icon = GFX_goal_generic_dangerous_deal
+		x = -4
+		y = 2
+		relative_position_id = PTR_nkvd_power
+		cost = 2
+		prerequisite = { focus = PTR_nkvd_power }
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = { focus = PTR_nkvd_charge }
+		mutually_exclusive = { focus = PTR_the_true_path }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = PTR_the_true_path
+		icon = GFX_goal_generic_dangerous_deal
+		x = 4
+		y = 2
+		relative_position_id = PTR_nkvd_power
+		cost = 2
+		prerequisite = { focus = PTR_nkvd_power }
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = { focus = PTR_nkvd_charge }
+		mutually_exclusive = { focus = PTR_anarchy_charge }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+}

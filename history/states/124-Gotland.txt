@@ -1,0 +1,23 @@
+state=
+{
+	id=124
+	name="STATE_124"
+	manpower = 56988
+	
+	state_category = sINTl_island
+	
+	history=
+	{
+		owner = INT
+		add_core_of = INT
+		buildings = {
+			infrastructure = 6
+			408 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces={
+		408 6258
+	}
+}

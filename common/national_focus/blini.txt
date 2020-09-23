@@ -1,0 +1,785 @@
+focus_tree = {
+	id = night_pancakes_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = NPC
+		}
+	}
+	
+	continuous_focus_position = {
+		x = 0
+		y = 2000
+	}
+	
+	default = no
+
+	focus = {
+		id = NPC_blinostroika
+		icon = GFX_goal_generic_dangerous_deal
+		x = 9
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		#mutually_exclusive = { focus = PTR_nkvd_power }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			unlock_decision_tooltip = npc_blinostroika_decision
+			hidden_effect = {
+				country_event = { 
+					id = npc.4
+				}
+			}
+			add_political_power = 120
+		}
+	}
+	focus = {
+		id = NPC_fast_order
+		icon = GFX_goal_generic_dangerous_deal
+		x = 8
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = NPC_blinostroika }
+
+		mutually_exclusive = { focus = NPC_light_order }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = revisionism
+			}
+			add_popularity = {
+				ideology = revisionism
+				popularity = 0.05
+			}
+			add_timed_idea = {
+				idea = revolutionary_order
+				days = 360
+			}
+			swap_ideas = {
+				remove_idea = no_defence_at_all
+				add_idea = no_defence_at_all_1
+			}
+		}
+	}
+	focus = {
+		id = NPC_kurenkovs_emergency_powers
+		icon = GFX_goal_generic_dangerous_deal
+		x = -3
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		relative_position_id = NPC_fast_order
+
+		prerequisite = { focus = NPC_fast_order }
+
+		#mutually_exclusive = { focus = NPC_light_order }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 120
+			add_popularity = {
+				ideology = revisionism
+				popularity = 0.05
+			}
+			hidden_effect = {
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.025
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.025
+				}
+			}
+		}
+	}
+	focus = {
+		id = NPC_we_need_more_territories
+		icon = GFX_goal_generic_dangerous_deal
+		x = -5
+		y = 2
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+
+		relative_position_id = NPC_fast_order
+
+		prerequisite = { focus = NPC_kurenkovs_emergency_powers }
+
+		#mutually_exclusive = { focus = NPC_light_order }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = {
+				ideology = revisionism
+				popularity = 0.015
+			}
+			hidden_effect = {
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.01
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.01
+				}
+			}
+			transfer_state = 619
+			619 = {
+				add_core_of = NPC
+			}
+			transfer_state = 287
+			287 = {
+				add_core_of = NPC
+			}
+			transfer_state = 759
+			759 = {
+				add_core_of = NPC
+			}
+		}
+	}
+	focus = {
+		id = NPC_we_need_more_oil
+		icon = GFX_goal_generic_dangerous_deal
+		x = -5
+		y = 3
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+
+		relative_position_id = NPC_fast_order
+
+		prerequisite = { focus = NPC_we_need_more_territories }
+
+		available = {
+			619 = { is_fully_controlled_by = ROOT }
+		}
+
+		#mutually_exclusive = { focus = NPC_light_order }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = {
+				ideology = revisionism
+				popularity = 0.015
+			}
+			hidden_effect = {
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.01
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.01
+				}
+			}
+			619 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = oil
+					amount = 4
+				}
+			}
+		}
+	}
+	focus = {
+		id = NPC_we_need_more_guns
+		icon = GFX_goal_generic_dangerous_deal
+		x = -3
+		y = 2
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+
+		relative_position_id = NPC_fast_order
+
+		prerequisite = { focus = NPC_kurenkovs_emergency_powers }
+
+		#mutually_exclusive = { focus = NPC_light_order }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = {
+				ideology = revisionism
+				popularity = 0.025
+			}
+			hidden_effect = {
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.025
+				}
+			}
+			add_ideas = limited_conscription
+		}
+	}
+	focus = {
+		id = NPC_we_need_more_steel
+		icon = GFX_goal_generic_dangerous_deal
+		x = -3
+		y = 3
+		cost = 9
+		ai_will_do = {
+			factor = 1
+		}
+
+		relative_position_id = NPC_fast_order
+
+		prerequisite = { focus = NPC_we_need_more_guns }
+
+		#mutually_exclusive = { focus = NPC_light_order }
+
+		available_if_capitulated = yes
+
+		available = {
+			330 = { is_fully_controlled_by = ROOT }
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = revisionism
+				popularity = 0.01
+			}
+			hidden_effect = {
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.03
+				}
+			}
+			330 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 16
+				}
+			}			
+		}
+	}
+	focus = {
+		id = NPC_for_the_kurenkov
+		icon = GFX_goal_generic_dangerous_deal
+		x = -1
+		y = 2
+		cost = 6
+		ai_will_do = {
+			factor = 1
+		}
+
+		relative_position_id = NPC_fast_order
+
+		prerequisite = { focus = NPC_kurenkovs_emergency_powers }
+
+		#mutually_exclusive = { focus = NPC_light_order }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = {
+				ideology = revisionism
+				popularity = 0.025
+			}
+			add_ideas = war_economy
+			set_war_support = 0.8
+		}
+	}
+	focus = {
+		id = NPC_more_factories
+		icon = GFX_goal_generic_dangerous_deal
+		x = -1
+		y = 3
+		cost = 6
+		ai_will_do = {
+			factor = 1
+		}
+
+		relative_position_id = NPC_fast_order
+
+		prerequisite = { focus = NPC_for_the_kurenkov }
+
+		#mutually_exclusive = { focus = NPC_light_order }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = {
+				ideology = revisionism
+				popularity = 0.025
+			}
+			add_ideas = ENG_for_the_good_of_the_revolution_idea
+		}
+	}
+	focus = {
+		id = NPC_kurenkov_in_power
+		icon = GFX_goal_generic_dangerous_deal
+		x = -5
+		y = 4
+		cost = 6
+		ai_will_do = {
+			factor = 1
+		}
+
+		relative_position_id = NPC_fast_order
+
+		prerequisite = { focus = NPC_more_factories }
+		prerequisite = { focus = NPC_we_need_more_steel }
+		prerequisite = { focus = NPC_we_need_more_oil }
+
+		mutually_exclusive = { focus = NPC_power_to_the_morozov }
+		mutually_exclusive = { focus = NPC_kurenkov_kruzjok }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = {
+				ideology = revisionism
+				popularity = 0.025
+			}
+			add_country_leader_trait = dictator
+		}
+	}
+	focus = {
+		id = NPC_kurenkov_kruzjok
+		icon = GFX_goal_generic_dangerous_deal
+		x = -3
+		y = 4
+		cost = 6
+		ai_will_do = {
+			factor = 1
+		}
+
+		relative_position_id = NPC_fast_order
+
+		prerequisite = { focus = NPC_more_factories }
+		prerequisite = { focus = NPC_we_need_more_steel }
+		prerequisite = { focus = NPC_we_need_more_oil }
+
+		mutually_exclusive = { focus = NPC_kurenkov_in_power }
+		mutually_exclusive = { focus = NPC_power_to_the_morozov }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = {
+				ideology = revisionism
+				popularity = -0.1
+			}
+			set_politics = {
+				ruling_party = communism
+			}
+			create_country_leader = {
+				name = "Sergo Kurenkov"
+				desc = ""
+				picture = "gfx/leaders/SAV/portrait_kurenk_tri.dds"
+				expire = "1965.1.1"
+				ideology = marxism
+				traits = {
+					#
+				}
+			}
+			add_country_leader_trait = communist_revolutionary
+			add_country_leader_trait = dictator
+			#unlock_national_focus = NPC_light_order
+			#unlock_national_focus = NPC_get_equipment
+			#unlock_national_focus = NPC_get_mp_effort
+			#unlock_national_focus = NPC_prepare_for_the_south_war
+			
+		}
+	}
+	focus = {
+		id = NPC_parliament_questions
+		icon = GFX_goal_generic_dangerous_deal
+		x = -1
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+
+		relative_position_id = NPC_kurenkov_in_power
+
+		prerequisite = { focus = NPC_kurenkov_in_power }
+
+		#mutually_exclusive = { focus = NPC_power_to_the_morozov }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = NPC_power_to_the_morozov
+		icon = GFX_goal_generic_dangerous_deal
+		x = -1
+		y = 4
+		cost = 6
+		ai_will_do = {
+			factor = 1
+		}
+
+		relative_position_id = NPC_fast_order
+
+		prerequisite = { focus = NPC_more_factories }
+		prerequisite = { focus = NPC_we_need_more_steel }
+		prerequisite = { focus = NPC_we_need_more_oil }
+
+		mutually_exclusive = { focus = NPC_kurenkov_in_power }
+		mutually_exclusive = { focus = NPC_kurenkov_kruzjok }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = {
+				ideology = revisionism
+				popularity = -0.1
+			}
+			set_politics = {
+				ruling_party = communism
+			}
+			add_country_leader_trait = communist_revolutionary
+			unlock_national_focus = NPC_light_order
+			unlock_national_focus = NPC_get_equipment
+			unlock_national_focus = NPC_get_mp_effort
+			unlock_national_focus = NPC_prepare_for_the_south_war
+		}
+	}
+	focus = {
+		id = NPC_towards_the_north_republic
+		icon = GFX_goal_generic_dangerous_deal
+		x = 1
+		y = 1
+		cost = 10
+		
+		relative_position_id = NPC_fast_order
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			revisionism > 0.15
+		}
+
+		prerequisite = { focus = NPC_fast_order focus = NPC_light_order }
+
+		#mutually_exclusive = { focus = NPC_light_order }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			country_event = { 
+				id = npc.5
+			}
+		}
+	}
+	focus = {
+		id = NPC_light_order
+		icon = GFX_goal_generic_dangerous_deal
+		x = 10
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { focus = NPC_blinostroika }
+	
+		mutually_exclusive = { focus = NPC_fast_order }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_political_power = 70
+		}
+	}
+	focus = {
+		id = NPC_prepare_for_the_south_war
+		icon = GFX_goal_generic_dangerous_deal
+		x = 3
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		relative_position_id = NPC_light_order
+
+		prerequisite = { focus = NPC_light_order }
+	
+		#mutually_exclusive = { focus = NPC_fast_order }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = NPC_forts_text
+			#hidden_effect = {
+			615 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 1575
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 7571
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 1180
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 10421
+					instant_build = yes
+				}
+			}
+			614 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 4058
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 1169
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 7092
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 10003
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 11980
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 10119
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 11944
+					instant_build = yes
+				}
+			}
+			#}
+		}
+	}
+	focus = {
+		id = NPC_doctrine_effort
+		icon = GFX_goal_generic_dangerous_deal
+		x = -2
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		relative_position_id = NPC_prepare_for_the_south_war
+
+		prerequisite = { focus = NPC_prepare_for_the_south_war }
+	
+		#mutually_exclusive = { focus = NPC_fast_order }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = NPC_get_mp_effort
+		icon = GFX_goal_generic_dangerous_deal
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		relative_position_id = NPC_prepare_for_the_south_war
+
+		prerequisite = { focus = NPC_prepare_for_the_south_war }
+	
+		#mutually_exclusive = { focus = NPC_fast_order }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_manpower = 50000
+			add_timed_idea = {
+				idea = mobilization_campaign
+				days = 180
+			}
+			hidden_effect = {
+				country_event = {
+					id = npc.8
+				}
+			}
+		}
+	}
+	focus = {
+		id = NPC_get_equipment
+		icon = GFX_goal_generic_dangerous_deal
+		x = 2
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		relative_position_id = NPC_prepare_for_the_south_war
+
+		prerequisite = { focus = NPC_prepare_for_the_south_war }
+	
+		#mutually_exclusive = { focus = NPC_fast_order }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 10000
+				producer = NPC
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 500
+				producer = NPC
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 200
+				producer = NPC
+			}
+			hidden_effect = {
+				country_event = {
+					id = npc.9
+				}
+			}
+		}
+	}
+	focus = {
+		id = NPC_get_south_reich
+		icon = GFX_goal_generic_dangerous_deal
+		x = 0
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		relative_position_id = NPC_prepare_for_the_south_war
+
+		prerequisite = { focus = NPC_get_mp_effort }
+		prerequisite = { focus = NPC_get_equipment }
+		prerequisite = { focus = NPC_doctrine_effort }
+	
+		#mutually_exclusive = { focus = NPC_fast_order }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = PUS
+				expire = 0
+			}
+		}
+	}
+	focus = {
+		id = NPC_savia_alliance
+		icon = GFX_goal_generic_dangerous_deal
+		x = 2
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		relative_position_id = NPC_towards_the_north_republic
+
+		prerequisite = { focus = NPC_doctrine_effort}
+	
+		#mutually_exclusive = { focus = NPC_fast_order }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			SAV = {
+				country_event = {
+					id = npc.6
+				}
+			}
+		}
+	}
+}

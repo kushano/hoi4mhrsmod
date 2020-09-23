@@ -1,0 +1,58 @@
+#reload countrycolors
+
+SAV = {
+	color = HSV { 0.0 1 0.73 }
+	color_ui = rgb { 250 10 30 }
+}
+NPC = {
+	color = HSV { 0.0 1 0.55 }
+	color_ui = rgb { 141 1 1 }
+}
+SVM = {
+	color = HSV { 0.0 1 0.73 }
+	color_ui = rgb { 250 10 30 }
+}
+INT = {
+	color = HSV { 0.1 0.15 0.4 }
+	color_ui = rgb { 1 1 1 }
+}
+PUS = {
+	color = HSV { 0.1 0.4 0.3 }
+	color_ui = rgb { 30 30 30 }
+}
+KUB = {
+	color = HSV { 0.47 0.86 0.7 }
+	color_ui = rgb { 179 144 25 }
+}
+SWS = {
+	color = HSV { 0.51 1 1 }
+	color_ui = rgb { 255 215 1 }
+}
+RVB = {
+	color = HSV { 0.0 0.35 0.79 }
+	color_ui = rgb { 200 131 131 }	
+}
+APA = {
+	color = HSV { 0.13 0.85 0.99 }
+	color_ui = rgb { 133  56  250 }
+}
+PTR = {
+	color = HSV { 0.01 0.99 0.25 }
+	color_ui = rgb { 62  0  0 }
+}
+MNH = {
+	color = HSV { 0.01 0.01 0.71 }
+	color_ui = rgb { 181  181  181 }
+}
+KSK = {
+	color = HSV { 1.00 1.00 0.71 }
+	color_ui = rgb { 0  255  150 }
+}
+DRS = {
+	color = HSV { 0.0 0.5 1 }
+	color_ui = rgb { 50 50 255 }
+}
+KRJ = {
+	color = HSV { 0.0 0.5 1 }
+	color_ui = rgb { 255 30 55 }
+}

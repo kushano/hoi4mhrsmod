@@ -1,0 +1,167 @@
+ideas = {
+	country = {
+		north_republic_resistance = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = north_republic
+			
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				political_power_factor = -0.35
+				drift_defence_factor = -0.25
+				mobilization_laws_cost_factor = 1
+				trade_laws_cost_factor = 1
+				economy_cost_factor = 1
+			}
+		}
+		north_republic_resistance_second_stage = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = north_republic
+			
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				political_power_factor = -0.3
+				drift_defence_factor = -0.2
+				mobilization_laws_cost_factor = 1
+				trade_laws_cost_factor = 1
+				economy_cost_factor = 1
+			}
+		}
+		north_republic_resistance_third_stage = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = north_republic
+			
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				political_power_factor = -0.2
+				drift_defence_factor = -0.1
+				mobilization_laws_cost_factor = 0.75
+				trade_laws_cost_factor = 0.75
+				economy_cost_factor = 0.75
+			}
+		}
+		no_defence_at_all = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_fortify_the_borders
+			
+			modifier = {
+				conscription_factor = -0.75
+				production_speed_bunker_factor = -10
+				production_speed_coastal_bunker_factor = -10
+				production_speed_anti_air_building_factor = -10
+				production_speed_naval_base_factor = -10
+				production_speed_air_base_factor = -10
+			}
+		}
+		no_defence_at_all_1 = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_fortify_the_borders
+			
+			modifier = {
+				conscription_factor = -0.60
+			}
+		}
+		mobilization_campaign = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = all_adults_serve
+			
+			modifier = {
+				weekly_manpower = 5000
+				№conscription_factor = 0.15
+			}
+		}
+		inspired_workers = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				stability_weekly = 0.001
+				war_support_weekly = 0.001
+				political_power_factor = 0.15
+				communism_drift = 0.01
+				industrial_capacity_factory = 0.10
+			}
+		}
+		free_market_npc = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = por_unstable_republic
+			
+			modifier = {
+				political_power_factor = -0.1
+				democratic_drift = 0.02
+				revisionism_drift = 0.02
+				industrial_capacity_factory = -0.05
+			}
+		}
+		revolutionary_order = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = ast_classify_aliens
+			
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				communism_drift = -0.1
+				memcommunism_drift = -0.1
+				revisionism_drift = 0.1
+				industrial_capacity_factory = -0.10
+			}
+		}
+	}
+}

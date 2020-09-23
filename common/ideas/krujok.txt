@@ -1,0 +1,144 @@
+ideas = {
+	country = {
+		krj_hehel_idea_1 = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = hehel
+			
+			modifier = {
+				neutrality_drift = 0.05
+				communism_drift = 0.05
+				fascism_drift = 0.05
+				revisionism_drift = 0.05
+				justify_war_goal_time = 0.5
+				army_leader_start_planning_level = 1
+				army_org_factor = -0.5
+				consumer_goods_factor = 1
+			}
+		}
+		krj_hehel_idea_mat_1 = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = hehel
+			
+			modifier = {
+				neutrality_drift = 0.03
+				communism_drift = 0.05
+				fascism_drift = 0.03
+				revisionism_drift = 0.03
+				memcommunism_drift = 0.03
+				justify_war_goal_time = 0.5
+				army_leader_start_planning_level = 1
+				army_org_factor = -0.4
+				consumer_goods_factor = 0.9
+			}
+		}
+		krj_hehel_idea_idea_1 = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = hehel
+			
+			modifier = {
+				neutrality_drift = 0.07
+				communism_drift = 0.03
+				fascism_drift = 0.07
+				revisionism_drift = 0.03
+				memcommunism_drift = -0.03
+				justify_war_goal_time = 0.5
+				army_leader_start_planning_level = 1
+				army_org_factor = -0.4
+				consumer_goods_factor = 0.9
+			}
+		}
+		krj_no_action = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = jap_the_unthinkable_option
+			
+			modifier = {
+				political_power_gain = -1
+			}
+		}
+		krj_good_pops = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = hol_aloof_neutrality
+			
+			modifier = {
+				consumer_goods_factor = -1
+			}
+		}
+		krj_dockyards = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = brooklyn_naval_yard
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.05
+				production_speed_dockyard_factor = 0.05
+			}
+		}
+		krj_dockyards_1 = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = brooklyn_naval_yard
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.3
+				production_speed_dockyard_factor = 0.3
+			}
+		}
+		krj_dockyards_2 = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = brooklyn_naval_yard
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.3
+				production_speed_dockyard_factor = 0.3
+				experience_gain_navy = 0.025
+				experience_gain_navy_factor = 0.15
+			}
+		}
+	}
+}

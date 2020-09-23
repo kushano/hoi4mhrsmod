@@ -1,0 +1,16 @@
+sichevalnya_krj = {
+	icon = generic_independence
+
+	picture = GFX_decision_cat_generic_mefo_bills
+
+	visible = {
+		original_tag = KRJ
+	}
+	allowed = {
+		original_tag = KRJ
+	}
+	visible_when_empty = yes
+	priority = {
+		base = 10
+	}
+}

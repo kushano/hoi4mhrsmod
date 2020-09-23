@@ -1,0 +1,60 @@
+dev_ptr = {
+	dev_generals = {
+		fire_only_once = yes
+		days_mission_timeout = 1
+		is_good = yes
+	
+        visible = {
+            has_country_leader = {
+				name = "Sergey Kurenchev"
+				ruling_only = yes
+			}
+        }
+        
+		activation = {
+            country_exists = PTR
+        }
+		
+        available = {
+			has_country_leader = {
+				name = "Sergey Kurenchev"
+				ruling_only = yes
+			}	
+        }
+        complete_effect = {
+
+        }
+		timeout_effect = {
+			country_event = { id = ptr.1 }
+		}
+    }
+	dev_generals_2 = {
+		fire_only_once = yes
+		days_mission_timeout = 1
+		is_good = yes
+	
+        visible = {
+            has_country_leader = {
+				name = "People's Commisariat of Internal Affairs"
+				ruling_only = yes
+			}
+        }
+        
+		activation = {
+            country_exists = PTR
+        }
+		
+        available = {
+			has_country_leader = {
+				name = "People's Commisariat of Internal Affairs"
+				ruling_only = yes
+			}	
+        }
+        complete_effect = {
+
+        }
+		timeout_effect = {
+			country_event = { id = ptr.2 }
+		}
+    }
+}

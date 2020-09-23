@@ -1,0 +1,251 @@
+units= {
+	fleet = {
+		name = "Ujnii Front"			
+		naval_base = 3686 # Makurino-Morsk
+		task_force = {				
+			name = "Savian Republic South Fleet"
+			location = 3686 # Makurino-Morsk
+			### Battleship Division 1 ###			
+			ship = {
+				name = "SRS The Great Savberg"
+				definition = battleship
+				start_experience_factor = 0.25
+				equipment = {
+					ship_hull_heavy_1 = {
+						amount = 1
+						owner = SAV
+						version_name = "The Great Savberg Class"
+					}
+				}
+			}	
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Sk-Bolotks Destr." definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Sk-Bolotks Class" } } }
+			ship = { name = "SRS Sk-Bolotks Destr." definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Sk-Bolotks Class" } } }
+			ship = { name = "SRS Sk-Bolotks Destr." definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Sk-Bolotks Class" } } }
+			
+			ship = { name = "SRS October's Revolution Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SAV version_name = "October's Revolution Class" } } }
+			ship = { name = "SRS October's Revolution Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SAV version_name = "October's Revolution Class" } } }
+			ship = { name = "SRS November's Revolution Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SAV version_name = "November's Revolution Class" } } }
+			
+			ship = { name = "SRS Makurin's Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SAV version_name = "Makurin Class" } } }
+		}
+		task_force = {				
+			name = "Savian Republic South Submarine Fleet"
+			location = 9680 # Makurino-Morsk				
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+		}
+		task_force = {				
+			name = "Savian Republic South Submarine Fleet"
+			location = 9417 # Makurino-Morsk				
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA Class" } } }
+			ship = { name = "SRS SovA Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA Class" } } }
+			ship = { name = "SRS SovA Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA Class" } } }
+		}
+	}
+	fleet = {
+		name = "Severnyi Front"			
+		naval_base = 3151 # Staro-Savbern
+		task_force = {				
+			name = "Savian Republic North Fleet"
+			location = 3151 # Staro-Savbern
+			### Battleship Division 1 ###			
+			ship = {
+				name = "SRS The Savian Republic"
+				definition = battleship
+				start_experience_factor = 1
+				equipment = {
+					ship_hull_heavy_1 = {
+						amount = 1
+						owner = SAV
+						version_name = "The Great Savberg Class"
+					}
+				}
+			}	
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Sk-Bolotks Destr." definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Sk-Bolotks Class" } } }
+			ship = { name = "SRS Sk-Bolotks Destr." definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Sk-Bolotks Class" } } }
+			ship = { name = "SRS Sk-Bolotks Destr." definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Sk-Bolotks Class" } } }
+			ship = { name = "SRS Sk-Bolotks Destr." definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Sk-Bolotks Class" } } }
+			
+			ship = { name = "SRS October's Revolution Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SAV version_name = "October's Revolution Class" } } }
+			ship = { name = "SRS October's Revolution Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SAV version_name = "October's Revolution Class" } } }
+			ship = { name = "SRS October's Revolution Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SAV version_name = "October's Revolution Class" } } }
+			ship = { name = "SRS October's Revolution Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SAV version_name = "October's Revolution Class" } } }
+			ship = { name = "SRS November's Revolution Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SAV version_name = "November's Revolution Class" } } }
+			ship = { name = "SRS November's Revolution Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SAV version_name = "November's Revolution Class" } } }
+			ship = { name = "SRS November's Revolution Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SAV version_name = "November's Revolution Class" } } }
+			
+			ship = { name = "SRS Makurin's Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SAV version_name = "Makurin Class" } } }
+			ship = { name = "SRS Makurin's Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SAV version_name = "Makurin Class" } } }
+			ship = { name = "SRS Makurin's Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SAV version_name = "Makurin Class" } } }
+		}
+		task_force = {				
+			name = "Savian Republic North Fleet 2"
+			location = 3152 # Makurino-Morsk				
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS November's Revolution Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SAV version_name = "November's Revolution Class" } } }
+			ship = { name = "SRS Makurin's Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SAV version_name = "Makurin Class" } } }
+		}
+		task_force = {				
+			name = "Savian Republic North Fleet 4"
+			location = 6332 # Makurino-Morsk
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Sk-Bolotks Destr." definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Sk-Bolotks Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Sk-Bolotks Destr." definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Sk-Bolotks Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Sk-Bolotks Destr." definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Sk-Bolotks Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Sk-Bolotks Destr." definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Sk-Bolotks Class" } } }ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Sk-Bolotks Destr." definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Sk-Bolotks Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS November's Revolution Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SAV version_name = "November's Revolution Class" } } }
+			ship = { name = "SRS November's Revolution Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SAV version_name = "November's Revolution Class" } } }
+			ship = { name = "SRS Makurin's Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SAV version_name = "Makurin Class" } } }
+			ship = { name = "SRS Makurin's Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SAV version_name = "Makurin Class" } } }
+		}
+		task_force = {				
+			name = "Savian Republic North Fleet 3"
+			location = 9340 # Makurino-Morsk				
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA Class" } } }
+			ship = { name = "SRS SovA Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA Class" } } }
+			ship = { name = "SRS SovA Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA Class" } } }
+			
+			ship = { name = "SRS Makurin's Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SAV version_name = "Makurin Class" } } }
+			
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+		}
+		task_force = {				
+			name = "Savian Republic North Fleet 5"
+			location = 3134 # Makurino-Morsk				
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA Class" } } }
+			
+			ship = { name = "SRS Makurin's Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SAV version_name = "Makurin Class" } } }
+			
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+		}
+		task_force = {				
+			name = "Savian Republic North Fleet 6"
+			location = 3338 # Makurino-Morsk				
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			
+			ship = { name = "SRS Makurin's Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SAV version_name = "Makurin Class" } } }
+			
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+		}
+	}
+	fleet = {
+		name = "Vostochnii Front"			
+		naval_base = 957 # Mari-Sergievo
+		task_force = {				
+			name = "Savian Republic Eastern Fleet"
+			location = 957 # Mari-Sergievo
+			### Battleship Division 1 ###			
+			ship = {
+				name = "SRS The November's Revolution"
+				definition = battleship
+				start_experience_factor = 0.5
+				equipment = {
+					ship_hull_heavy_1 = {
+						amount = 1
+						owner = SAV
+						version_name = "The Great Savberg Class"
+					}
+				}
+			}	
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Sk-Bolotks Destr." definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Sk-Bolotks Class" } } }
+			ship = { name = "SRS Sk-Bolotks Destr." definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Sk-Bolotks Class" } } }
+			ship = { name = "SRS Sk-Bolotks Destr." definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Sk-Bolotks Class" } } }
+			ship = { name = "SRS Sk-Bolotks Destr." definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Sk-Bolotks Class" } } }
+			
+			ship = { name = "SRS October's Revolution Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SAV version_name = "October's Revolution Class" } } }
+			ship = { name = "SRS October's Revolution Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SAV version_name = "October's Revolution Class" } } }
+			ship = { name = "SRS October's Revolution Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SAV version_name = "October's Revolution Class" } } }
+			ship = { name = "SRS October's Revolution Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SAV version_name = "October's Revolution Class" } } }
+			ship = { name = "SRS November's Revolution Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SAV version_name = "November's Revolution Class" } } }
+			ship = { name = "SRS November's Revolution Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SAV version_name = "November's Revolution Class" } } }
+			ship = { name = "SRS November's Revolution Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SAV version_name = "November's Revolution Class" } } }
+			
+			ship = { name = "SRS Makurin's Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SAV version_name = "Makurin Class" } } }
+			ship = { name = "SRS Makurin's Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SAV version_name = "Makurin Class" } } }
+			ship = { name = "SRS Makurin's Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SAV version_name = "Makurin Class" } } }
+		}
+		task_force = {				
+			name = "Savian Republic Eastern Fleet 2"
+			location = 9604 # Makurino-Morsk				
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS November's Revolution Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SAV version_name = "November's Revolution Class" } } }
+			ship = { name = "SRS Makurin's Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SAV version_name = "Makurin Class" } } }
+		}
+		task_force = {				
+			name = "Savian Republic Eastern Fleet 3"
+			location = 12446 # Makurino-Morsk
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Sk-Bolotks Destr." definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Sk-Bolotks Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Sk-Bolotks Destr." definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Sk-Bolotks Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Sk-Bolotks Destr." definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Sk-Bolotks Class" } } }
+			ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Sk-Bolotks Destr." definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Sk-Bolotks Class" } } }ship = { name = "SRS Mari-Sergievsky Destr." definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Mari-Sergievsky Class" } } }
+			ship = { name = "SRS Sk-Bolotks Destr." definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = SAV version_name = "Sk-Bolotks Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS SovA-M Submarine" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = SAV version_name = "SovA-M Class" } } }
+			ship = { name = "SRS November's Revolution Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SAV version_name = "November's Revolution Class" } } }
+			ship = { name = "SRS November's Revolution Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SAV version_name = "November's Revolution Class" } } }
+			ship = { name = "SRS Makurin's Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SAV version_name = "Makurin Class" } } }
+			ship = { name = "SRS Makurin's Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SAV version_name = "Makurin Class" } } }
+		}
+	}
+}

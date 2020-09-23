@@ -1,0 +1,336 @@
+﻿###########################
+# npc Events
+###########################
+
+add_namespace = npc
+
+country_event = { #on startup
+	id = npc.1
+	title = npc.1.t
+	desc = npc.1.d
+	picture = GFX_report_event_soviet_purge_officers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = npc.1.a
+		custom_effect_tooltip = NPC_startup
+		set_country_flag = market_is_closed
+		set_variable = {
+			var = npc_market_industrial_complex
+			value = 0
+		}
+		set_variable = {
+			var = npc_market_arms_factory
+			value = 0
+		}
+		hidden_effect = {
+			add_opinion_modifier = {
+				target = SAV
+				modifier = similar_ruling_party
+			}
+			add_opinion_modifier = {
+				target = SAV
+				modifier = communism_leanings_good
+			}
+			SAV = {
+				add_opinion_modifier = {
+					target = NPC
+					modifier = similar_ruling_party
+				}
+				add_opinion_modifier = {
+					target = NPC
+					modifier = communism_leanings_good
+				}
+			}
+			add_opinion_modifier = {
+				target = SAV
+				modifier = similar_ruling_party
+			}
+			add_opinion_modifier = {
+				target = SAV
+				modifier = communism_leanings_good
+			}
+			SAV = {
+				add_opinion_modifier = {
+					target = NPC
+					modifier = similar_ruling_party
+				}
+				add_opinion_modifier = {
+					target = NPC
+					modifier = communism_leanings_good
+				}
+			}
+		}
+	}
+}
+country_event = { # arms factory blinostroika
+	id = npc.2
+	title = npc.2.t
+	desc = npc.2.d
+	picture = GFX_report_event_soviet_purge_officers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = npc.2.a
+		add_offsite_building = { type = arms_factory level = 1 }
+		add_to_variable = {
+			var = npc_market_arms_factory
+			value = 1
+		}
+	}
+}
+country_event = { # industrial_complex blinostroika
+	id = npc.3
+	title = npc.3.t
+	desc = npc.3.d
+	picture = GFX_report_event_soviet_purge_officers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = npc.3.a
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_to_variable = {
+			var = npc_market_industrial_complex
+			value = 1
+		}
+	}
+}
+country_event = { # kurenkov opposition
+	id = npc.4
+	title = npc.4.t
+	desc = npc.4.d
+	picture = GFX_report_event_gomosocialism
+
+	is_triggered_only = yes
+	
+	fire_only_once = no
+	
+	option = {
+		name = npc.4.a
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = revisionism
+			popularity = 0.05
+		}
+		add_political_power = -35
+	}
+}
+country_event = { # north republic
+	id = npc.5
+	title = npc.5.t
+	desc = npc.5.d
+	picture = GFX_report_event_gomosocialism
+
+	is_triggered_only = yes
+	
+	option = {
+		name = npc.5.a
+		trigger = {
+			has_completed_focus = NPC_fast_order
+		}
+		add_popularity = {
+			ideology = revisionism
+			popularity = 0.05
+		}
+		remove_ideas = {
+			north_republic_resistance
+		}
+	}
+	option = {
+		name = npc.5.b
+		trigger = {
+			has_completed_focus = NPC_light_order
+		}
+		swap_ideas = {
+			remove_idea = north_republic_resistance
+			add_idea = north_republic_resistance_second_stage
+		}
+		country_event = {
+			id = npc.4
+		}
+	}
+}
+country_event = { # savia help
+	id = npc.6
+	title = npc.6.t
+	desc = npc.6.d
+	picture = GFX_report_event_npc_help
+
+	is_triggered_only = yes
+	
+	option = {
+		name = npc.6.a
+		ai_chance = { 
+			factor = 90
+		}
+		set_global_flag = helped_savia_npc
+		#trigger = {
+		#	has_opinion = {
+		#		target = NPC
+		#		value = 30
+		#	}
+		#}
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = land_doctrine
+		}
+		add_manpower = 100000
+		NPC = {
+			country_event = {
+				id = npc.7
+			}
+		}
+	}
+	option = {
+		name = npc.6.b
+		add_opinion_modifier = {
+			target = NPC
+			modifier = faction_traitor
+		}
+		NPC = {
+			country_event = {
+				id = npc.7
+			}
+		}
+	}
+}
+country_event = { # savia help 2
+	id = npc.7
+	title = npc.7.t
+	desc = npc.7.d
+	picture = GFX_report_event_npc_help
+
+	is_triggered_only = yes
+	
+	option = {
+		name = npc.7.a
+		trigger = {
+			has_global_flag = helped_savia_npc
+		}
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = land_doctrine
+		}
+		add_manpower = 100000
+	}
+	option = {
+		name = npc.7.b
+		trigger = {
+			NOT = { has_global_flag = helped_savia_npc }
+		}
+		add_opinion_modifier = {
+			target = SAV
+			modifier = faction_traitor
+		}
+	}
+}
+
+country_event = { # no deputees
+	id = npc.8
+	title = npc.8.t
+	desc = npc.8.d
+	picture = GFX_report_event_npc_deputees
+
+	is_triggered_only = yes
+	
+	fire_only_once = no
+	
+	option = {
+		name = npc.8.a
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.02
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.03
+		}
+		add_political_power = -35
+	}
+}
+
+country_event = { # koffe kingdom
+	id = npc.9
+	title = npc.9.t
+	desc = npc.9.d
+	picture = GFX_report_event_npc_nazi_scum
+
+	is_triggered_only = yes
+	
+	fire_only_once = no
+	
+	option = {
+		name = npc.8.a
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.01
+		}
+		add_political_power = 15
+		add_opinion_modifier = {
+			target = KUB
+			modifier = hostile_status
+		}
+		KUB = {
+			add_opinion_modifier = {
+				target = NPC
+				modifier = hostile_status
+			}
+		}
+	}
+}
+country_event = { # monarchy
+	id = npc.10
+	title = npc.10.t
+	desc = npc.10.d
+	picture = GFX_report_event_npc_nazi_scum
+
+	is_triggered_only = yes
+	
+	fire_only_once = no
+	
+	option = {
+		name = npc.10.a
+		set_politics = {
+			ruling_party = neutrality
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.15
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Prime Minister Kurenkov"
+			desc = ""
+			picture = "gfx/leaders/PTR/portrait_kurenkov_the_king.dds"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+				
+			}
+		}
+		add_country_leader_trait = inexperienced_imperialist
+	}
+	option = {
+		name = npc.10.b
+		set_politics = {
+			ruling_party = neutrality
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.15
+		}
+		add_country_leader_trait = autocratic_imperialist
+	}
+}

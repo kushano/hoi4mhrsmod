@@ -1,0 +1,25 @@
+state={
+	id=798
+	name="STATE_798"
+	provinces={
+		8013 8066 
+	}
+	manpower = 4637140
+	
+	state_category = rural
+	
+	resources={
+		steel=16 # was: 3
+	}
+	history={
+		owner = RN1
+		buildings = {
+			infrastructure = 4
+			arms_factory = 2
+			industrial_complex = 2  
+		}
+		add_core_of = RVB
+		add_core_of = RN1
+	}
+	buildings_max_level_factor=1.000
+}

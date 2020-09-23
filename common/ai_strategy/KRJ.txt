@@ -1,0 +1,71 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+KRJ_unit_production = {
+	enable = {
+		original_tag = KRJ
+	}
+	abort = {
+		always = no
+	}
+	
+	ai_strategy = {
+		type = role_ratio
+		id = marines
+		value = 5
+	}
+	
+	#Air unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = 30
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = naval_bomber
+		value = 30
+	}
+	
+	
+	# Naval unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = 5
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = carrier
+		value = 5
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = 90
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = 90
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 15
+	}
+}

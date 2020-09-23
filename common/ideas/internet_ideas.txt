@@ -1,0 +1,37 @@
+ideas = {
+	country = {
+		disintegrity_int = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = ast_classify_aliens
+			
+			modifier = {
+				mobilization_laws_cost_factor = 1
+				trade_laws_cost_factor = 1000
+				economy_cost_factor = 1000
+			}
+		}
+		the_needs_of_population_int = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = can_wartime_prices_and_trade_board
+			
+			modifier = {
+				consumer_goods_factor = 0.98
+				industrial_capacity_factory = -0.8
+				industrial_capacity_dockyard = -0.8
+				local_resources_factor = -0.20
+			}
+		}
+	}
+}

@@ -1,0 +1,1239 @@
+﻿###########################
+# Savian Events
+###########################
+
+add_namespace = savia
+
+country_event = { #on startup
+	id = savia.mod1
+	title = savia.mod1.t
+	desc = savia.mod1.d
+	picture = GFX_report_event_soviet_purge_officers_01
+
+	is_triggered_only = yes
+	
+	timeout_days = 1
+	
+	option = {
+		name = savia.mod1.a
+		hidden_effect = {
+			set_division_template_lock = {
+				division_template = "NKVD"
+				is_locked = yes
+			}
+		}
+		set_country_flag = game_started
+		add_country_leader_trait = collective_upr
+	}
+}
+
+country_event = {
+	id = savia.2
+	title = savia.2.t
+	desc = savia.2.d
+	picture = GFX_report_event_communists_cheer
+
+	fire_only_once = yes
+
+	#is_triggered_only = yes
+	
+	trigger = {
+		tag = SAV
+		NOT = { has_completed_focus = SAV_soviet }
+		focus_progress = {
+			focus = SAV_soviet
+			progress > 0.10
+		}
+	}
+	
+	option = {
+		name = savia.2.a
+		add_popularity = {
+			ideology = memcommunism
+			popularity = -0.1
+		}
+		create_country_leader = {
+			name = "Council of People`s Commisariats"
+			desc = ""
+			picture = "portrait_snk.dds"
+			expire = "1965.1.1"
+			ideology = memcommunism_type
+			traits = {
+				cabinet_crisis
+			}
+		}
+		set_variable = {
+			var = kurenkov_union
+			value = 1
+		}
+		set_variable = {
+			var = serafim_wins
+			value = 1
+		}
+		set_variable = {
+			var = yagodkin_nazbol
+			value = 1
+		}
+		country_event = {
+			id = savia.3
+		}
+	}
+}
+
+country_event = { #Куренков говорит о наследии Макурина
+	id = savia.3
+	title = savia.3.t
+	desc = savia.3.d
+	picture = GFX_news_event_001
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { # Сказать хорошо
+		name = savia.3.a
+		add_to_variable = {
+			var = kurenkov_union
+			value = 1
+		}
+		add_popularity = {
+			ideology = memcommunism
+			popularity = 0.05
+		}
+		country_event = {
+			id = savia.4
+		}
+	}
+	option = { # Сказать плохо
+		name = savia.3.b
+		add_to_variable = {
+			var = kurenkov_union
+			value = 1
+		}
+		add_popularity = {
+			ideology = revisionism
+			popularity = 0.035
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.035
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.035
+		}
+		country_event = {
+			id = savia.5
+		}
+	}
+}
+country_event = { # Критика или поддержка одобрения
+	id = savia.4
+	title = savia.4.t
+	desc = savia.4.d
+	picture = GFX_news_event_001
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { # Поддержать
+		name = savia.4.a
+		add_to_variable = {
+			var = kurenkov_union
+			value = 1
+		}
+		add_popularity = {
+			ideology = memcommunism
+			popularity = 0.035
+		}
+		country_event = {
+			id = savia.6
+		}
+	}
+	option = { # Критиковать
+		name = savia.4.b
+		add_to_variable = {
+			var = serafim_wins
+			value = 1
+		}
+		add_to_variable = {
+			var = yagodkin_nazbol
+			value = 1
+		}
+		add_popularity = {
+			ideology = revisionism
+			popularity = 0.035
+		}
+		country_event = {
+			id = savia.6
+		}
+	}
+}
+country_event = { # Критика или поддержка критики
+	id = savia.5
+	title = savia.5.t
+	desc = savia.5.d
+	picture = GFX_news_event_001
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { # Поддержать
+		name = savia.5.a
+		add_to_variable = {
+			var = kurenkov_union
+			value = 1
+		}
+		add_to_variable = {
+			var = serafim_wins
+			value = 1
+		}
+		add_to_variable = {
+			var = yagodkin_nazbol
+			value = 1
+		}
+		add_popularity = {
+			ideology = revisionism
+			popularity = 0.035
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.035
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.035
+		}
+		country_event = {
+			id = savia.6
+		}
+	}
+	option = { # Критиковать
+		name = savia.5.b
+		add_to_variable = {
+			var = serafim_wins
+			value = 1
+		}
+		add_to_variable = {
+			var = yagodkin_nazbol
+			value = 1
+		}
+		add_popularity = {
+			ideology = memcommunism
+			popularity = 0.035
+		}
+		country_event = {
+			id = savia.6
+		}
+	}
+}
+country_event = { # Ягодкин об изменении курса
+	id = savia.6
+	title = savia.6.t
+	desc = savia.6.d
+	picture = GFX_news_event_002
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { # Поддержать
+		name = savia.6.a
+		add_to_variable = {
+			var = serafim_wins
+			value = 1
+		}
+		country_event = {
+			id = savia.7
+		}
+	}
+	option = { # Критиковать
+		name = savia.6.b
+		add_to_variable = {
+			var = yagodkin_nazbol
+			value = 1
+		}
+		country_event = {
+			id = savia.7
+		}
+	}
+	option = { # Критиковать
+		name = savia.6.c
+		add_to_variable = {
+			var = kurenkov_union
+			value = 1
+		}
+		country_event = {
+			id = savia.7
+		}
+	}
+}
+country_event = { # Статус Апатрида
+	id = savia.7
+	title = savia.7.t
+	desc = savia.7.d
+	picture = GFX_news_event_003
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { # Поддержать
+		name = savia.7.a
+		add_to_variable = {
+			var = kurenkov_union
+			value = -100
+		}
+		release = APA
+		country_event = {
+			id = savia.8
+		}
+	}
+	option = { # Критиковать
+		name = savia.7.b
+		add_to_variable = {
+			var = serafim_wins
+			value = 1
+		}
+		add_ideas = apatrid
+		country_event = {
+			id = savia.9
+		}
+	}
+	option = { # Критиковать
+		name = savia.7.c
+		add_to_variable = {
+			var = yagodkin_nazbol
+			value = 1
+		}
+		country_event = {
+			id = savia.9
+		}
+	}
+	option = { # Поддержать
+		name = savia.7.e
+		add_to_variable = {
+			var = kurenkov_union
+			value = -100
+		}
+		release = APA
+		APA = {
+			change_tag_from = SAV
+		}
+		SAV = { hidden_effect = { country_event = { id = savia.8 days = 2 } } }
+	}
+}
+country_event = { # Контент
+	id = savia.8
+	title = savia.8.t
+	desc = savia.8.d
+	picture = GFX_news_event_005
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { # Поддержать
+		name = savia.8.a
+		add_to_variable = {
+			var = yagodkin_nazbol
+			value = 1
+		}
+		#country_event = {
+		#	id = savia.10
+		#}
+	}
+	option = { # Критиковать
+		name = savia.8.b
+		add_to_variable = {
+			var = serafim_wins
+			value = 1
+		}
+		#country_event = {
+		#	id = savia.10
+		#}
+	}
+}
+country_event = { # Мурасов, Ягодкин или вместе
+	id = savia.10
+	title = savia.10.t
+	desc = savia.10.d
+	picture = GFX_news_event_001
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = savia.10.a
+		trigger = {
+			check_variable = { yagodkin_nazbol = serafim_wins }
+			check_variable = { yagodkin_nazbol > morozov_wins }
+		}
+		create_country_leader = {
+			name = "Council of People`s Commisariats"
+			desc = ""
+			picture = "portrait_snk.dds"
+			expire = "1965.1.1"
+			ideology = memcommunism_type
+			traits = {
+				collective_upr_1
+			}
+		}
+		set_country_flag = elections_held
+		unlock_national_focus = SAV_infastructure
+		unlock_national_focus = SAV_kollektiv
+	}
+	option = {
+		name = savia.10.b
+		trigger = {
+			check_variable = { yagodkin_nazbol > serafim_wins }
+			check_variable = { yagodkin_nazbol > morozov_wins }
+		}
+		create_country_leader = {
+			name = "Ivan Yagodkin"
+			desc = ""
+			picture = "sav_yagodkin.dds"
+			expire = "1965.1.1"
+			ideology = memcommunism_type
+			traits = {
+				
+			}
+		}
+		set_country_flag = elections_held
+	}
+	option = {
+		name = savia.10.с
+		trigger = {
+			check_variable = { yagodkin_nazbol < serafim_wins }
+			check_variable = { serafim_wins > morozov_wins }
+		}
+		create_country_leader = {
+			name = "Serafim Murasov"
+			desc = ""
+			picture = "sav_murasov.dds"
+			expire = "1965.1.1"
+			ideology = memcommunism_type
+			traits = {
+				
+			}
+		}
+		set_country_flag = elections_held
+	}
+	option = {
+		name = savia.10.e
+		trigger = {
+			check_variable = { yagodkin_nazbol < morozov_wins }
+			check_variable = { serafim_wins < morozov_wins }
+		}
+		create_country_leader = {
+			name = "Danila Morozov"
+			desc = ""
+			picture = "sav_morozov_army.dds"
+			expire = "1965.1.1"
+			ideology = memcommunism_type
+			traits = {
+				
+			}
+		}
+		set_country_flag = elections_held
+	}
+}
+country_event = { # Суд
+	id = savia.9
+	title = savia.9.t
+	desc = savia.9.d
+	picture = GFX_news_event_004
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { # Поддержать
+		name = savia.9.a
+		add_to_variable = {
+			var = kurenkov_union
+			value = 1
+		}
+		set_variable = {
+			var = morozov_wins
+			value = 1
+		}
+	}
+	option = { # Критиковать
+		name = savia.9.b
+		add_to_variable = {
+			var = yagodkin_nazbol
+			value = 1
+		}
+	}
+	option = { # Критиковать
+		name = savia.9.c
+		add_to_variable = {
+			var = serafim_wins
+			value = 1
+		}
+	}
+}
+country_event = {
+	id = savia.11
+	title = savia.11.t
+	desc = savia.11.d
+	picture = GFX_news_event_004
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	#trigger = {
+	#	original_tag = SAV
+	#	date > 1936.02.19
+	#}
+	
+	option = {
+		name = savia.11.a
+		add_popularity = {
+			ideology = memcommunism
+			popularity = 0.05
+		}
+	}
+	option = {
+		name = savia.11.b
+		add_popularity = {
+			ideology = revisionism
+			popularity = 0.025
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.025
+		}
+	}
+	option = {
+		name = savia.11.c
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		set_country_flag = monarchy_wants_to_return
+	}
+}
+country_event = {
+	id = savia.12
+	title = savia.12.t
+	desc = savia.12.d
+	picture = GFX_report_event_saf_coup
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	#option = {
+	#	name = savia.12.a
+	#	set_country_flag = kurenkov_wb_elected
+	#	add_to_variable = {
+	#		var = kurenkov_union
+	#		value = 3
+	#	}
+	#	add_to_variable = {
+	#		var = serafim_wins
+	#		value = -1
+	#	}
+	#	add_to_variable = {
+	#		var = yagodkin_nazbol
+	#		value = -1
+	#	}
+	#	add_to_variable = {
+	#		var = morozov_wins
+	#		value = -1
+	#	}
+	#}
+	option = {
+		name = savia.12.b
+		set_country_flag = serafim_wb_elected
+		add_to_variable = {
+			var = serafim_wins
+			value = 3
+		}
+		add_to_variable = {
+			var = kurenkov_union
+			value = -1
+		}
+		add_to_variable = {
+			var = yagodkin_nazbol
+			value = -1
+		}
+		add_to_variable = {
+			var = morozov_wins
+			value = -1
+		}
+	}
+	option = {
+		name = savia.12.c
+		set_country_flag = yagodkin_wb_elected
+		add_to_variable = {
+			var = yagodkin_nazbol
+			value = 3
+		}
+		add_to_variable = {
+			var = kurenkov_union
+			value = -1
+		}
+		add_to_variable = {
+			var = serafim_wins
+			value = -1
+		}
+		add_to_variable = {
+			var = morozov_wins
+			value = -1
+		}
+	}
+	option = {
+		name = savia.12.e
+		set_country_flag = morozov_wb_elected
+		add_to_variable = {
+			var = morozov_wins
+			value = 3
+		}
+		add_to_variable = {
+			var = kurenkov_union
+			value = -1
+		}
+		add_to_variable = {
+			var = serafim_wins
+			value = -1
+		}
+		add_to_variable = {
+			var = yagodkin_nazbol
+			value = -1
+		}
+	}
+}
+country_event = {
+	id = savia.13
+	title = savia.13.t
+	desc = savia.13.d
+	picture = GFX_report_event_eng_mosley_mussolini
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = savia.13.a
+		add_political_power = -30
+	}
+}
+# Демобилизацию требуют наши сердца!
+country_event = {
+	id = savia.14
+	title = savia.14.t
+	desc = savia.14.d
+	picture = GFX_report_event_long_feb_patriotic_shoot
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 30 }
+
+	#is_triggered_only = yes
+
+	trigger = {
+		original_tag = SAV
+		has_war = yes
+		has_stability < 0.2
+		has_war_support < 0.2
+		has_country_flag = opolchenie_SAV
+	}
+
+	option = {
+		name = savia.14.a
+		add_political_power = -150
+		delete_unit_template_and_units = {
+			division_template = "Narodnoe Opolchenie"
+		}
+		add_manpower = 90000
+		add_stability = 0.05
+		add_war_support = 0.05
+	}
+}
+# Куренковская дестабилизация
+country_event = {
+	id = savia.15
+	title = savia.15.t
+	desc = savia.15.d
+	picture = GFX_news_event_003
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 30 }
+
+	#is_triggered_only = yes
+
+	trigger = {
+		original_tag = SAV
+		NOT = {
+			has_country_leader = {
+				name = "Władysław Makurin"
+				ruling_only = yes
+			}
+		}
+	}
+
+	option = {
+		name = savia.15.a
+		add_political_power = -50
+		add_popularity = {
+			ideology = revisionism
+			popularity = 0.02
+		}
+		add_to_variable = {
+			var = kurenkov_union
+			value = 1
+		}
+	}
+	option = {
+		name = savia.15.b
+		add_stability = -0.02
+		add_war_support = -0.02
+		add_to_variable = {
+			var = kurenkov_union
+			value = 1
+		}
+	}
+}
+country_event = {
+	id = savia.16
+	title = savia.16.t
+	desc = savia.16.d
+	picture = GFX_report_event_gomosocialism
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 60 }
+
+	#is_triggered_only = yes
+
+	trigger = {
+		original_tag = SAV
+		NOT = {
+			has_country_leader = {
+				name = "Władysław Makurin"
+				ruling_only = yes
+			}
+		}
+	}
+
+	option = {
+		name = savia.16.a
+		add_political_power = 15
+		add_popularity = {
+			ideology = revisionism
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = memcommunism
+			popularity = 0.02
+		}
+		set_country_flag = gomosocialism
+		add_to_variable = {
+			var = kurenkov_union
+			value = 1
+		}
+	}
+	option = {
+		name = savia.16.b
+		add_stability = -0.03
+		add_war_support = -0.03
+		add_political_power = -25
+		add_to_variable = {
+			var = kurenkov_union
+			value = -1
+		}
+		add_to_variable = {
+			var = serafim_wins
+			value = 1
+		}
+		add_to_variable = {
+			var = yagodkin_nazbol
+			value = 1
+		}
+		add_to_variable = {
+			var = morozov_wins
+			value = 1
+		}
+	}
+}
+country_event = {
+	id = savia.17
+	title = savia.17.t
+	desc = savia.17.d
+	picture = GFX_report_event_chinese_soldiers
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 90 }
+
+	#is_triggered_only = yes
+
+	trigger = {
+		original_tag = SAV
+		NOT = {
+			has_country_leader = {
+				name = "Władysław Makurin"
+				ruling_only = yes
+			}
+		}
+	}
+
+	option = {
+		name = savia.17.a
+		add_political_power = -25
+		add_stability = -0.01
+		add_war_support = -0.01
+		add_popularity = {
+			ideology = revisionism
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = anarchism
+			popularity = 0.01
+		}
+	}
+}
+country_event = {
+	id = savia.18
+	title = savia.18.t
+	desc = savia.18.d
+	picture = GFX_report_event_chinese_soldiers
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 120 }
+
+	#is_triggered_only = yes
+
+	trigger = {
+		original_tag = SAV
+		NOT = {
+			has_country_leader = {
+				name = "Władysław Makurin"
+				ruling_only = yes
+			}
+		}
+	}
+
+	option = {
+		name = savia.17.a
+		add_political_power = -25
+		add_stability = -0.01
+		add_war_support = -0.01
+		add_timed_idea = {
+			idea = stachki
+			days = 30
+		}
+		add_popularity = {
+			ideology = revisionism
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = anarchism
+			popularity = 0.01
+		}
+	}
+}
+country_event = {
+	id = savia.19
+	title = savia.19.t
+	desc = savia.19.d
+	picture = GFX_report_event_generic_truck
+
+	fire_only_once = no
+
+	#mean_time_to_happen = { days = 90 }
+
+	is_triggered_only = yes
+
+	trigger = {
+		
+	}
+
+	option = {
+		name = savia.19.a
+		trigger = {
+			OR = {
+				has_completed_focus = SAV_reindustr_2
+				has_completed_focus = SAV_reindustr_3
+			}
+			NOT = {
+				has_country_flag = industry_done
+			}
+		}
+		add_political_power = -35
+		add_stability = -0.01
+		add_war_support = -0.01
+		add_timed_idea = {
+			idea = stachki
+			days = 10
+		}
+		add_popularity = {
+			ideology = revisionism
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = anarchism
+			popularity = 0.01
+		}
+		swap_ideas = {
+			remove_idea = unstable_economy_mhrs_4
+			add_idea = unstable_economy_mhrs_5
+		}
+		set_country_flag = industry_done
+	}
+	option = {
+		name = savia.19.b
+		trigger = {
+			has_country_flag = industry_done
+		}
+		add_political_power = -35
+		add_stability = -0.01
+		add_war_support = -0.01
+		add_timed_idea = {
+			idea = stachki
+			days = 10
+		}
+		add_popularity = {
+			ideology = revisionism
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = anarchism
+			popularity = 0.01
+		}
+		swap_ideas = {
+			remove_idea = unstable_economy_mhrs_5
+			add_idea = stable_economy_mhrs_1
+		}
+	}
+}
+country_event = {
+	id = savia.20
+	title = savia.20.t
+	desc = savia.20.d
+	picture = GFX_report_event_chinese_soldiers
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 150 }
+
+	#is_triggered_only = yes
+
+	trigger = {
+		original_tag = SAV
+		NOT = {
+			has_country_leader = {
+				name = "Władysław Makurin"
+				ruling_only = yes
+			}
+		}
+	}
+
+	option = {
+		name = savia.20.a
+		add_political_power = -25
+		add_stability = -0.01
+		add_war_support = -0.01
+		add_popularity = {
+			ideology = revisionism
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = anarchism
+			popularity = 0.01
+		}
+		add_to_variable = {
+			var = kurenkov_union
+			value = 1
+		}
+		add_to_variable = {
+			var = serafim_wins
+			value = -2
+		}
+		add_to_variable = {
+			var = yagodkin_nazbol
+			value = 2
+		}
+		add_to_variable = {
+			var = morozov_wins
+			value = -2
+		}
+	}
+	option = {
+		name = savia.20.b
+		add_political_power = -50
+		add_stability = -0.01
+		add_war_support = -0.01
+		add_popularity = {
+			ideology = memcommunism
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.02
+		}
+		add_to_variable = {
+			var = kurenkov_union
+			value = -2
+		}
+		add_to_variable = {
+			var = serafim_wins
+			value = 2
+		}
+		add_to_variable = {
+			var = yagodkin_nazbol
+			value = -2
+		}
+		add_to_variable = {
+			var = morozov_wins
+			value = 2
+		}
+	}
+}
+country_event = {
+	id = savia.21
+	title = savia.21.t
+	desc = savia.21.d
+	picture = GFX_report_event_chinese_soldiers
+
+	fire_only_once = yes
+
+	#mean_time_to_happen = { days = 150 }
+
+	is_triggered_only = yes
+
+	option = {
+		name = savia.21.a
+		add_political_power = 25
+		add_stability = 0.01
+		add_war_support = 0.01
+		add_to_variable = {
+			var = serafim_wins
+			value = 2
+		}
+		add_to_variable = {
+			var = yagodkin_nazbol
+			value = -1
+		}
+		add_to_variable = {
+			var = morozov_wins
+			value = -1
+		}
+	}
+	option = {
+		name = savia.21.b
+		add_political_power = 25
+		add_stability = 0.01
+		add_war_support = 0.01
+		add_to_variable = {
+			var = serafim_wins
+			value = -1
+		}
+		add_to_variable = {
+			var = yagodkin_nazbol
+			value = 1
+		}
+		add_to_variable = {
+			var = morozov_wins
+			value = 1
+		}
+	}
+}
+country_event = {
+	id = savia.22
+	title = savia.22.t
+	desc = savia.22.d
+	picture = GFX_report_event_chinese_soldiers
+
+	fire_only_once = yes
+
+	#mean_time_to_happen = { days = 150 }
+
+	is_triggered_only = yes
+
+	option = {
+		name = savia.22.a
+		add_timed_idea = {
+			idea = yagodkin_vbros
+			days = 15
+		}
+		#add_political_power = 25
+		add_stability = 0.01
+		add_war_support = 0.01
+		add_to_variable = {
+			var = yagodkin_nazbol
+			value = 1
+		}
+		add_to_variable = {
+			var = serafim_wins
+			value = -1
+		}
+		add_to_variable = {
+			var = morozov_wins
+			value = -1
+		}
+	}
+	option = {
+		name = savia.22.b
+		add_political_power = 15
+		add_stability = -0.01
+		add_war_support = 0.02
+		add_to_variable = {
+			var = serafim_wins
+			value = 1
+		}
+		add_to_variable = {
+			var = yagodkin_nazbol
+			value = -1
+		}
+		add_to_variable = {
+			var = morozov_wins
+			value = 1
+		}
+	}
+}
+country_event = {
+	id = savia.23
+	title = savia.23.t
+	desc = savia.23.d
+	picture = GFX_report_event_chinese_soldiers
+
+	fire_only_once = yes
+
+	#mean_time_to_happen = { days = 150 }
+
+	is_triggered_only = yes
+
+	option = {
+		name = savia.23.a
+		add_political_power = 25
+		add_stability = 0.01
+		add_war_support = 0.01
+		add_to_variable = {
+			var = kurenkov_union
+			value = -2
+		}
+		add_to_variable = {
+			var = morozov_wins
+			value = 2
+		}
+	}
+	option = {
+		name = savia.23.b
+		add_political_power = 25
+		add_stability = 0.01
+		add_war_support = 0.01
+		add_to_variable = {
+			var = yagodkin_nazbol
+			value = -2
+		}
+		add_to_variable = {
+			var = morozov_wins
+			value = 2
+		}
+	}
+	option = {
+		name = savia.23.c
+		add_political_power = 25
+		add_stability = 0.01
+		add_war_support = 0.01
+		add_to_variable = {
+			var = serafim_wins
+			value = -2
+		}
+		add_to_variable = {
+			var = morozov_wins
+			value = 2
+		}
+	}
+}
+country_event = {
+	id = savia.24
+	title = savia.24.t
+	desc = savia.24.d
+	picture = GFX_report_event_sav_vbros
+
+	fire_only_once = yes
+
+	#mean_time_to_happen = { days = 150 }
+
+	is_triggered_only = yes
+
+	option = {
+		name = savia.24.a
+		add_to_variable = {
+			var = kurenkov_union
+			value = -2
+		}
+	}
+	option = {
+		name = savia.24.b
+		add_to_variable = {
+			var = serafim_wins
+			value = -2
+		}
+	}
+	option = {
+		name = savia.24.c
+		add_to_variable = {
+			var = morozov_wins
+			value = -2
+		}
+	}
+	option = {
+		name = savia.24.e
+		add_to_variable = {
+			var = yagodkin_nazbol
+			value = -2
+		}
+	}
+}

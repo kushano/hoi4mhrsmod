@@ -1,0 +1,9 @@
+dev_ptr = {
+	icon = generic_propaganda
+
+	picture = GFX_decision_category_generic_political_actions
+
+	visible = {
+		original_tag = PTR
+	}
+}

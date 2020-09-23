@@ -1,0 +1,70 @@
+ideas = {
+	country = {
+		DRS_the_government_of_the_norse = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = sisu
+			
+			modifier = {
+				army_morale_factor = 0.1
+				attrition = -0.1
+			}
+		}
+		DRS_the_state_of_the_free = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_agrarian_reform
+			
+			modifier = {
+				drift_defence_factor = -0.5
+				political_advisor_cost_factor = -0.25
+				trade_laws_cost_factor = 0.25
+				economy_cost_factor = 0.25
+				mobilization_laws_cost_factor = 0.25
+			}
+		}
+		DRS_intervents = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_acquire_tanks
+			
+			modifier = {
+				drift_defence_factor = -0.5
+				stability_factor = -0.1
+				war_support_factor = -0.2
+				democratic_acceptance = 50
+			}
+		}
+		DRS_help_from_the_outside = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = generic_acquire_tanks
+			
+			modifier = {
+				weekly_manpower = 4500
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.3
+			}
+		}
+	}
+}

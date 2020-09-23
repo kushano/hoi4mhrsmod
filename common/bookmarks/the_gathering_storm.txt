@@ -1,0 +1,68 @@
+bookmarks = {
+	bookmark = {
+		name = "GATHERING_STORM_NAME"
+		desc = "GATHERING_STORM_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "SAV"
+		default = yes
+		
+		"INT"={
+			history = ""
+			ideology = fascism
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
+		"RVB"={
+			history = ""
+			ideology = memcommunism
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
+		"SAV"={
+			history = ""
+			ideology = memcommunism
+			#available = { has_dlc = "Man the Guns" }
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}	
+		"NPC"={
+			history = ""
+			ideology = communism
+			#available = { has_dlc = "Man the Guns" }
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
+		"KRJ"={
+			history = ""
+			ideology = memcommunism
+			#available = { has_dlc = "Man the Guns" }
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

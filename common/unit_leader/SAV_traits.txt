@@ -1,0 +1,50 @@
+leader_traits = {
+
+	
+##################################
+# Common Traits
+##################################
+	SAV_blinostroika = {
+		type = all
+		trait_type = personality_trait
+		gain_xp = {
+			always = no # not gainable
+		}
+		allowed = {
+			FROM = {
+				tag = JAP
+				tag = NPC
+			}
+		}
+		modifier = {
+			
+		}
+		
+		non_shared_modifier = {
+			experience_gain_factor = 0.1
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+}
+
+##################################
+# Field Marshal traits.
+##################################
+	
+##################################
+# Corps Commander traits.
+##################################
+	
+##################################
+# Corps Commander assignabme traits.
+##################################
+
+##################################
+# Naval traits.
+##################################

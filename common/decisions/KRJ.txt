@@ -1,0 +1,118 @@
+sichevalnya_krj = {
+	KRJ_play_hoi = {
+		fire_only_once = no
+		days_remove = 5
+		
+        available = {
+			
+        }
+        remove_effect = {
+           army_experience = 1
+        }
+		ai_will_do = {
+			factor = 200
+		}
+    }
+	KRJ_play_eu = {
+		fire_only_once = no
+		days_remove = 5
+		
+        available = {
+			
+        }
+        remove_effect = {
+           add_political_power = 1
+        }
+		ai_will_do = {
+			factor = 200
+		}
+    }
+	KRJ_attract_new_krujkovci = {
+		fire_only_once = no
+		days_remove = 15
+		
+		cost = 5
+		
+        available = {
+			
+        }
+        remove_effect = {
+           add_manpower = 100
+        }
+		ai_will_do = {
+			factor = 100
+		}
+    }
+	KRJ_reattract_new_krujkovci = {
+		fire_only_once = no
+		days_remove = 15
+		
+        available = {
+			has_manpower > 100
+        }
+		modifier = {
+			political_power_gain = 0.5
+		}
+        complete_effect = {
+           add_manpower = -100
+        }
+		ai_will_do = {
+			factor = 50
+		}
+    }
+	KRJ_watch_evangelion = {
+		fire_only_once = no
+		days_remove = 30
+		
+		cost = 50
+		
+        available = {
+			
+        }
+        remove_effect = {
+			country_event = { id = krujok.3 }
+        }
+		ai_will_do = {
+			factor = 75
+		}
+    }
+	KRJ_idealism_decision = {
+		fire_only_once = yes
+		
+		visible = {
+			#has_completed_focus = KRJ_idealism
+		}
+		
+        available = {
+			has_completed_focus = KRJ_idealism
+        }
+        modifier = {
+            fascism_drift = 0.05
+        }
+        days_remove = 50
+    }
+	KRJ_idealism_decision_2 = {
+		fire_only_once = yes
+		
+		cost = 10
+		
+		visible = {
+			#has_completed_focus = KRJ_idealism
+		}
+		
+        available = {
+			has_completed_focus = KRJ_idealism
+        }
+        complete_effect = {
+			add_stability = -0.15
+            add_popularity = {
+				ideology = fascism
+				popularity = 0.15
+			}
+        }
+		modifier = {
+			stability_weekly = 0.007
+		}
+		days_remove = 180
+    }
+}

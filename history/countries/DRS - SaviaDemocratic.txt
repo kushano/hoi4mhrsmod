@@ -1,0 +1,82 @@
+﻿capital = 213
+
+#oob = "DRS_1936"
+
+set_research_slots = 2
+set_stability = 0.5
+set_war_support = 0.5
+
+add_ideas = {
+	DRS_the_government_of_the_norse
+	DRS_the_state_of_the_free
+	DRS_intervents
+	free_trade
+}
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	paratroopers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	gwtank = 1
+	basic_light_tank = 1  # PLACEHOLDER
+	#basic_heavy_tank = 1  # PLACEHOLDER
+	#basic_medium_tank = 1 # PLACEHOLDER
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	naval_bomber1 = 1
+	mass_assault = 1
+	fleet_in_being = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+
+set_convoys = 200
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 90
+	memcommunism = 9
+	communism = 1
+}
+
+create_country_leader = {
+	name = "Ivan Bern"
+	desc = ""
+	picture = "gfx/leaders/SAV/portrait_sav_bern.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+		autocratic_imperialist
+	}
+}
+
+###
+
+create_field_marshal = {
+	name = "Ivan Bern"
+	picture = "portrait_sav_bern.dds"
+	traits = { old_guard }
+	skill = 1
+
+	
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}

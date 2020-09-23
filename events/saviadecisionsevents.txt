@@ -1,0 +1,488 @@
+﻿###########################
+# Savian Events
+###########################
+
+add_namespace = saviadec
+
+country_event = {
+	id = saviadec.1
+	title = saviadec.1.t
+	desc = saviadec.1.d
+	picture = GFX_news_event_churchill_degaulle
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = saviadec.1.a
+		add_to_variable = {
+			var = kurenkov_union
+			value = 2
+		}
+	}
+	option = {
+		name = saviadec.1.b
+		add_to_variable = {
+			var = kurenkov_union
+			value = 1
+		}
+		set_country_flag = kurenkov_helped_maria
+	}
+}
+country_event = {
+	id = saviadec.2
+	title = saviadec.2.t
+	desc = saviadec.2.d
+	picture = GFX_report_event_carol_meeting
+
+	mean_time_to_happen = { days = 120 }
+
+	fire_only_once = yes
+
+	#is_triggered_only = no
+	
+	trigger = {
+		has_completed_focus = SAV_soviet_party
+		tag = SAV
+		revisionism > 0.15
+		#Нужно ли чекать его влияние ?..
+		#check_variable = { kurenkov_union > serafim_wins }
+		#check_variable = { kurenkov_union > yagodkin_nazbol }
+		#check_variable = { kurenkov_union > morozov_wins }
+		NOT = { country_exists = APA }
+		NOT = { country_exists = PTR }
+	}
+	
+	option = {
+		name = saviadec.2.a
+		delete_unit_template_and_units = {
+			division_template = "NKVD"
+		}
+		add_to_variable = {
+			var = kurenkov_union
+			value = -100
+		}
+		release = PTR
+		#country_event = { id = saviadec.3 }
+		if = {
+			limit = { SAV = { revisionism > 0.2 } }
+			PTR = {
+				transfer_state = 208
+				add_state_core = 208
+				transfer_state = 244
+				add_state_core = 244
+				transfer_state = 146
+				add_state_core = 146
+			}
+		}
+		if = {
+			limit = { SAV = { revisionism > 0.25 } }
+			PTR = {
+				transfer_state = 264
+				add_state_core = 264
+				transfer_state = 216
+				add_state_core = 216
+				transfer_state = 263
+				add_state_core = 263
+			}
+		}
+		add_popularity = {
+			ideology = revisionism
+			popularity = -1
+		}
+		PTR = {
+			country_event = { id = ptr.2 }
+		}
+		every_state = {
+			limit = {
+				is_owned_by = SAV
+			}
+			add_core_of = PTR
+		}
+	}
+	option = {
+		name = saviadec.2.b
+		delete_unit_template_and_units = {
+			division_template = "NKVD"
+		}
+		add_to_variable = {
+			var = kurenkov_union
+			value = -100
+		}
+		
+		release = PTR
+		#country_event = { id = saviadec.3 }
+		if = {
+			limit = { SAV = { revisionism > 0.2 } }
+			PTR = {
+				transfer_state = 208
+				add_state_core = 208
+				transfer_state = 244
+				add_state_core = 244
+				transfer_state = 146
+				add_state_core = 146
+			}
+		}
+		if = {
+			limit = { SAV = { revisionism > 0.25 } }
+			PTR = {
+				transfer_state = 264
+				add_state_core = 264
+				transfer_state = 216
+				add_state_core = 216
+				transfer_state = 263
+				add_state_core = 263
+			}
+		}
+		add_popularity = {
+			ideology = revisionism
+			popularity = -1
+		}
+		every_state = {
+			limit = {
+				is_owned_by = SAV
+			}
+			add_core_of = PTR
+		}
+		PTR = {
+			change_tag_from = SAV
+			country_event = { id = ptr.2 }
+		}
+	}
+}
+country_event = {
+	id = saviadec.3
+	title = saviadec.3.t
+	desc = saviadec.3.d
+	picture = GFX_report_event_french_resistance_01
+
+	mean_time_to_happen = { days = 120 }
+
+	fire_only_once = yes
+
+	#is_triggered_only = no
+	
+	trigger = {
+		OR = {
+			has_country_flag = monarchy_wants_to_return
+			has_country_flag = kurenkov_helped_maria
+		}
+		NOT = { country_exists = APA }
+	}
+	
+	option = {
+		name = saviadec.3.a
+		release = MNH
+		add_popularity = {
+			ideology = neutrality
+			popularity = -1
+		}
+		MNH = {
+			load_oob = "MNH_1936"
+			set_rule = {
+				can_create_factions = yes
+			}
+			create_faction = monarchy_mirs
+			add_to_faction = KUB
+			declare_war_on = {
+				target = SAV
+				type = annex_everything
+			}
+		}
+		every_state = {
+			limit = {
+				is_owned_by = SAV
+			}
+			add_core_of = MNH
+		}
+	}
+	option = {
+		name = saviadec.3.b
+		release = MNH
+		add_popularity = {
+			ideology = neutrality
+			popularity = -1
+		}
+		MNH = {
+			change_tag_from = SAV
+		}
+		MNH = {
+			load_oob = "MNH_1936"
+			set_rule = {
+				can_create_factions = yes
+			}
+			create_faction = monarchy_mirs
+			add_to_faction = KUB
+			declare_war_on = {
+				target = SAV
+				type = annex_everything
+			}
+		}
+		every_state = {
+			limit = {
+				is_owned_by = SAV
+			}
+			add_core_of = MNH
+		}
+	}
+}
+country_event = {
+	id = saviadec.4
+	title = saviadec.4.t
+	desc = saviadec.4.d
+	picture = GFX_report_event_carol_meeting
+
+	mean_time_to_happen = { days = 150 }
+
+	fire_only_once = yes
+
+	#is_triggered_only = no
+	
+	trigger = {
+		has_completed_focus = SAV_xx_soviet
+		tag = SAV
+		NOT = { has_completed_focus = SAV_reinforce_nkvd_and_army_2 }
+		NOT = { country_exists = APA }
+		NOT = { country_exists = PTR }
+	}
+	
+	option = {
+		name = saviadec.4.a
+		delete_unit_template_and_units = {
+			division_template = "NKVD"
+		}
+		release = PTR
+		PTR = {
+			load_oob = "PTR_1936"
+			create_country_leader = {
+				name = "People's Commisariat of Internal Affairs"
+				desc = ""
+				picture = "portrait_nkvd.dds"
+				expire = "1965.1.1"
+				ideology = revisionism_type
+				traits = {
+					
+				}
+			}
+			#country_event = { id = ptr.1 }
+		}
+		if = {
+			limit = { SAV = { revisionism > 0.2 } }
+			PTR = {
+				transfer_state = 208
+				add_state_core = 208
+				transfer_state = 244
+				add_state_core = 244
+				transfer_state = 146
+				add_state_core = 146
+			}
+		}
+		if = {
+			limit = { SAV = { revisionism > 0.25 } }
+			PTR = {
+				transfer_state = 264
+				add_state_core = 264
+				transfer_state = 216
+				add_state_core = 216
+				transfer_state = 263
+				add_state_core = 263
+			}
+		}
+		every_state = {
+			limit = {
+				is_owned_by = SAV
+			}
+			add_core_of = PTR
+		}
+		PTR = {
+			declare_war_on = {
+				target = SAV
+				type = annex_everything
+			}
+		}
+	}
+	option = {
+		name = saviadec.4.b
+		delete_unit_template_and_units = {
+			division_template = "NKVD"
+		}
+		release = PTR
+		if = {
+			limit = { SAV = { revisionism > 0.2 } }
+			PTR = {
+				transfer_state = 208
+				add_state_core = 208
+				transfer_state = 244
+				add_state_core = 244
+				transfer_state = 146
+				add_state_core = 146
+			}
+		}
+		if = {
+			limit = { SAV = { revisionism > 0.25 } }
+			PTR = {
+				transfer_state = 264
+				add_state_core = 264
+				transfer_state = 216
+				add_state_core = 216
+				transfer_state = 263
+				add_state_core = 263
+			}
+		}
+		MNH = {
+			load_oob = "PTR_1936"
+			create_country_leader = {
+				name = "People's Commisariat of Internal Affairs"
+				desc = ""
+				picture = "portrait_nkvd.dds"
+				expire = "1965.1.1"
+				ideology = revisionism_type
+				traits = {
+					
+				}
+			}
+			#country_event = { id = ptr.1 }
+		}
+		PTR = {
+			change_tag_from = SAV
+		}
+		every_state = {
+			limit = {
+				is_owned_by = SAV
+			}
+			add_core_of = PTR
+		}
+		PTR = {
+			declare_war_on = {
+				target = SAV
+				type = annex_everything
+			}
+		}
+	}
+}
+country_event = {
+	id = saviadec.5
+	title = saviadec.5.t
+	desc = saviadec.5.d
+	picture = GFX_report_event_carol_meeting
+
+	mean_time_to_happen = { days = 20 }
+
+	fire_only_once = yes
+
+	#is_triggered_only = no
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = SAV
+				democratic > 0.25
+				NOT = { country_exists = DRS }
+			}
+			AND = {
+				tag = SAV
+				SAV = {
+					NOT = {
+						has_full_control_of_state = 213
+					}
+				}
+				NOT = { country_exists = DRS }
+			}
+		}
+	}
+	
+	option = {
+		name = saviadec.5.a
+		DRS = {
+			transfer_state = 213
+			add_state_core = 213
+			transfer_state = 722
+			add_state_core = 722
+			transfer_state = 147
+			add_state_core = 147
+		}
+		if = {
+			limit = {
+				SAV = {
+					NOT = {
+						has_full_control_of_state = 215
+					}
+				}
+			}
+			DRS = {
+				transfer_state = 215
+				add_state_core = 215
+			}
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = -1
+		}
+		every_state = {
+			limit = {
+				is_owned_by = SAV
+			}
+			add_core_of = DRS
+		}
+		DRS = {
+			load_oob = "DRS_1936"
+			declare_war_on = {
+				target = SAV
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = DRS_help_from_the_outside
+				days = 90
+			}
+		}
+	}
+	option = {
+		name = saviadec.5.b
+		DRS = {
+			transfer_state = 213
+			add_state_core = 213
+			transfer_state = 722
+			add_state_core = 722
+			transfer_state = 147
+			add_state_core = 147
+		}
+		if = {
+			limit = {
+				SAV = {
+					NOT = {
+						has_full_control_of_state = 215
+					}
+				}
+			}
+			DRS = {
+				transfer_state = 215
+				add_state_core = 215
+			}
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = -1
+		}
+		every_state = {
+			limit = {
+				is_owned_by = SAV
+			}
+			add_core_of = DRS
+		}
+		DRS = {
+			change_tag_from = SAV
+		}
+		DRS = {
+			load_oob = "DRS_1936"
+			declare_war_on = {
+				target = SAV
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = DRS_help_from_the_outside
+				days = 90
+			}
+		}
+	}
+}

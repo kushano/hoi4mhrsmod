@@ -1,0 +1,76 @@
+vkps_war = {
+	icon = generic_propaganda
+
+	picture = GFX_decision_cat_generic_mefo_bills
+
+	visible = {
+		tag = SAV
+	}
+	allowed = {
+		tag = SAV
+	}
+	visible_when_empty = yes
+	priority = {
+		base = 11
+	}
+}
+
+counterrevolution = {
+	icon = generic_independence
+
+	picture = GFX_decision_cat_generic_mefo_bills
+
+	visible = {
+		original_tag = SAV
+	}
+	available = {
+		original_tag = SAV
+	}
+	allowed = {
+		tag = SAV
+	}
+	visible_when_empty = yes
+	priority = {
+		base = 10
+	}
+}
+
+#memeeconomics = {
+#	icon = usa_intervention_mandate
+#	
+#	visible = {
+#		original_tag = SAV
+#		has_completed_focus = SAV_memes_reindustr
+#	}
+#	#available = {
+#	#	has_completed_focus = SAV_memes_reindustr
+#	#}
+#}
+
+mhrs_vs_generals = {
+	icon = decision_category_usa_intervention_mandate
+
+	visible = {
+		original_tag = SAV
+		has_completed_focus = SAV_wars_1
+	}
+	available = {
+		has_completed_focus = SAV_wars_1
+	}
+	allowed = {
+		tag = SAV
+	}
+}
+
+dev = {
+	icon = generic_propaganda
+
+	picture = GFX_decision_category_generic_political_actions
+
+	visible = {
+		original_tag = SAV
+	}
+	allowed = {
+		tag = SAV
+	}
+}

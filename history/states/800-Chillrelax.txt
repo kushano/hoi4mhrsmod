@@ -1,0 +1,24 @@
+state={
+	id=800
+	name="STATE_800"
+	provinces={
+		10772 10843 10898 12792 
+	}
+	manpower = 637140
+	
+	state_category = rural
+	
+	resources={
+		steel=2 # was: 3
+	}
+	history={
+		owner = RVB
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1  
+		}
+		add_core_of = RVB
+	}
+	buildings_max_level_factor=1.000
+}

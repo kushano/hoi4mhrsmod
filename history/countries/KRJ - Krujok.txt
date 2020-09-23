@@ -1,0 +1,58 @@
+﻿capital = 647
+
+oob = "KRJ_1936"
+
+#set_variable = { var = titles_watched value = 0 }
+
+set_research_slots = 1
+set_stability = 0.4
+set_war_support = 0.5
+
+add_ideas = {
+	krj_no_action
+	krj_good_pops
+}
+
+set_technology = {
+	infantry_weapons = 1
+	basic_torpedo = 1
+	basic_battery = 1
+}
+
+set_convoys = 1
+
+set_politics = {
+	ruling_party = memcommunism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	memcommunism = 100
+}
+
+create_country_leader = {
+	name = "Maxim Kazantsev"
+	desc = ""
+	picture = "gfx/leaders/KRJ/portrait_kazantsev.dds"
+	expire = "1965.1.1"
+	ideology = memcommunism_type 
+	traits = {
+		manchu_army
+		water_likely
+	}
+}
+
+###
+create_field_marshal = {
+	name = "Maxim Kazantsev"
+	picture = "portrait_kazantsev.dds"
+	traits = { politically_connected }
+	skill = 1
+
+	
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
