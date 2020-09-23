@@ -12,7 +12,7 @@ state={
 
 		}
 		add_core_of = SAV
-		add_core_of = MNH
+		#add_core_of = MNH
 		victory_points = {
 			9628 3
 		}

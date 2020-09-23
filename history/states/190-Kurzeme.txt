@@ -19,7 +19,7 @@ state={
 			dockyard = 1
 		}
 		add_core_of = SAV
-		add_core_of = APA
+		 
 	}
 
 	provinces={

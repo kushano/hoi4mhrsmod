@@ -10,7 +10,7 @@ state={
 
 	history={
 		owner = SAV
-		add_core_of = KAZ
+		 
 		buildings = {
 			infrastructure = 4
 

@@ -4,15 +4,15 @@ state={
 	name="STATE_40" # Barnaul
 	manpower = 2107451
 	
-	state_category = lINTe_town
+	state_category = large_town
 
 	history={
-		owner = SAV
+		owner = KUB
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
 		}
-		add_core_of = SAV
+		add_core_of = KUB
 		1939.1.1 = {
 			buildings = {
 				industrial_complex = 2

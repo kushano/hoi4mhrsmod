@@ -7,12 +7,12 @@ state={
 	state_category = rural
 
 	history={
-		owner = SAV
+		owner = KUB
 		buildings = {
 			infrastructure = 3
 			arms_factory = 1
 		}
-		add_core_of = SAV
+		add_core_of = KUB
 	}
 
 	provinces={

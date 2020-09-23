@@ -15,25 +15,25 @@ vkps_war = {
 	}
 }
 
-counterrevolution = {
-	icon = generic_independence
-
-	picture = GFX_decision_cat_generic_mefo_bills
-
-	visible = {
-		original_tag = SAV
-	}
-	available = {
-		original_tag = SAV
-	}
-	allowed = {
-		tag = SAV
-	}
-	visible_when_empty = yes
-	priority = {
-		base = 10
-	}
-}
+#counterrevolution = {
+#	icon = generic_independence
+#
+#	picture = GFX_decision_cat_generic_mefo_bills
+#
+#	visible = {
+#		original_tag = SAV
+#	}
+#	available = {
+#		original_tag = SAV
+#	}
+#	allowed = {
+#		tag = SAV
+#	}
+#	visible_when_empty = yes
+#	priority = {
+#		base = 10
+#	}
+#}
 
 #memeeconomics = {
 #	icon = usa_intervention_mandate

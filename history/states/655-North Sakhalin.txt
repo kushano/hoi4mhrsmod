@@ -6,8 +6,8 @@ state={
 	
 	state_category = pastoral
 	history={
-		owner = SAV
-		add_core_of = SAV
+		owner = KUB
+		add_core_of = KUB
 		add_claim_by = INT
 		buildings = {
 			infrastructure = 3

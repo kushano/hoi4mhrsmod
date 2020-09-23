@@ -9,20 +9,22 @@ if = {
 	#}
 }
 
+set_variable = { var = sav_var_for_bad value = 1 }
+
 set_research_slots = 3
-set_stability = 0.65
+set_stability = 0.6
 set_war_support = 0.5
 
-if = {
-	limit = {
-		has_start_date < 1936.01.02
-	}
-
-	declare_war_on = {
-		target = INT
-		type = annex_everything
-	}
-}
+#if = {
+#	limit = {
+#		has_start_date < 1936.01.02
+#	}
+#
+#	declare_war_on = {
+#		target = INT
+#		type = annex_everything
+#	}
+#}
 
 add_ideas = {
 	internet_wars

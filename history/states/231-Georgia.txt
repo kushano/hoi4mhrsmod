@@ -22,7 +22,7 @@ state={
 
 		}
 		add_core_of = SAV
-		add_core_of = MNH
+		#add_core_of = MNH
 		1939.1.1 = {
 			buildings = {
 				industrial_complex = 3
